@@ -5,6 +5,7 @@
 * Pavla Novak
 * Anja Petković
 * Matija Pretnar
+* Jože Potrebuješ
 
 ## Opis
 
