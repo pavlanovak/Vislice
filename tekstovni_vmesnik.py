@@ -47,7 +47,7 @@ def ponudi_moznosti():
     return tekst
 
 def izberi_ponovitev():
-    print(ponudi_moznosti())
+    input(ponudi_moznosti())
     moznost = zahtevaj_moznost().strip().lower()
     if moznost == PONOVNI_ZAGON:
         igra = model_vislice.nova_igra()
