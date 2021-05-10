@@ -1,8 +1,11 @@
 import bottle
 import model_vislice
 
-vislice = model_vislice.Vislice()
 SKRIVNOST='DanesJeLepDan'
+DATOTEKA_S_STANJEM = "stanje.json"
+vislice = model_vislice.Vislice(DATOTEKA_S_STANJEM)
+vislice.nalozi_igre_iz_datoteke()
+
 
 @bottle.get('/')
 def osnovna_stran():
