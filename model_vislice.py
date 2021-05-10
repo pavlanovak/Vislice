@@ -44,7 +44,7 @@ class Igra:
             if i.upper() in ugibanje:
                 pravilni_del += i
             else:
-                pravilni_del += '_'
+                pravilni_del += ' _'
         return pravilni_del
     
     def nepravilni_ugibi(self):
