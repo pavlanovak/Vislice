@@ -84,9 +84,10 @@ with open('/Users/pavlanovak/Desktop/uvp 2021/vislice/Besede.txt', 'r') as f:
     
     class Vislice:
 
-        def __init__(self, stanje):
+        def __init__(self, stanje, datoteka_z_besedami):
             self.igre = {}
             self.datoteka_s_stanjem = stanje
+            self.datoteka_z_besedami = datoteka_z_besedami
         
         def prost_id_igre(self):
             if self.igre == {}:
@@ -96,7 +97,11 @@ with open('/Users/pavlanovak/Desktop/uvp 2021/vislice/Besede.txt', 'r') as f:
         
         def nova_igra(self):
             self.nalozi_igre_iz_datoteke()
+            with open(self.datoteka_z_besedami, 'r') as f:
+                bazen_besed = [beseda.strip().upper() for beseda in f.readlines()]
             igra = nova_igra()
+            geslo = random.choice(bazen_besed)
+            igra = Igra(geslo, [])
             id_igre = self.prost_id_igre()
             self.igre[id_igre] = (igra, ZACETEK)
             self.zapisi_igro_v_datoteko()

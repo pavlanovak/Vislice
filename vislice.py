@@ -3,7 +3,8 @@ import model_vislice
 
 SKRIVNOST='DanesJeLepDan'
 DATOTEKA_S_STANJEM = "stanje.json"
-vislice = model_vislice.Vislice(DATOTEKA_S_STANJEM)
+DATOTEKA_Z_BESEDAMI = '/Users/pavlanovak/Desktop/uvp 2021/vislice/Besede.txt'
+vislice = model_vislice.Vislice(DATOTEKA_S_STANJEM, DATOTEKA_Z_BESEDAMI)
 vislice.nalozi_igre_iz_datoteke()
 
 
